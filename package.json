@@ -1,0 +1,46 @@
+{
+  "name": "electron-sample-crashreport",
+  "version": "1.0.0",
+  "description": "electron sample - crashReporter",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-builder --mac --x64",
+    "build-win": "electron-builder --win --x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katsube/electron-sample-crashreport.git"
+  },
+  "author": "M.Katsube",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katsube/electron-sample-crashreport/issues"
+  },
+  "homepage": "https://github.com/katsube/electron-sample-crashreport#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "build": {
+    "appId": "net.makitokatsube.app.sample.crashreport",
+    "files": [
+      "package.json",
+      "public/",
+      "index.js"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
