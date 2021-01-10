@@ -12,7 +12,7 @@ crashReporter.start({
   uploadToServer: true,    // サーバにアップロードするか
   ignoreSystemCrashHandler: false, // メインプロセスで発生したクラッシュをシステムクラッシュハンドラに転送しない
   rateLimit: false,        // アップロードする回数を1時間に1度にする(Windows,macOS)
-  compress: true,         // アップロード時にgzipで圧縮するか(省略時はfalse)
+  compress: false,         // アップロード時にgzipで圧縮するか(省略時はfalse)
 });
 
 

@@ -23,7 +23,8 @@
     "electron": "^11.1.1",
     "electron-builder": "^22.9.1",
     "express": "^4.17.1",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "nedb": "^1.8.0"
   },
   "build": {
     "appId": "net.makitokatsube.app.sample.crashreport",
