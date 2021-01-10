@@ -2,17 +2,16 @@ const { app, BrowserWindow, crashReporter, ipcMain } = require('electron')
 const fs = require('fs')
 
 // クラッシュリポートを開始
-// https://www.electronjs.org/docs/api/crash-reporter
 crashReporter.start({
   // 必須
   submitURL: 'http://localhost:3000/receive',
 
   // 以降は任意
-  productName: app.name,   // アプリ名(String)
+  productName: app.name,   // アプリ名
   uploadToServer: true,    // サーバにアップロードするか
   ignoreSystemCrashHandler: false, // メインプロセスで発生したクラッシュをシステムクラッシュハンドラに転送しない
   rateLimit: false,        // アップロードする回数を1時間に1度にする(Windows,macOS)
-  compress: false,         // アップロード時にgzipで圧縮するか(省略時はfalse)
+  compress: false,         // アップロード時にgzipで圧縮するか
 });
 
 
